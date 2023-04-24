@@ -21,6 +21,8 @@ public class MusicianController {
                                          @RequestParam Long bandId) {
         try {
             return ResponseEntity.ok(musicianService.createMusician(musician, bandId));
+        } catch (MusicianAlreadyExistException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

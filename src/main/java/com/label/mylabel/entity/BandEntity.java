@@ -64,4 +64,12 @@ public class BandEntity {
     public void setMusicians(List<MusicianEntity> musicians) {
         this.musicians = musicians;
     }
+
+    public List<AlbumEntity> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(List<AlbumEntity> albums) {
+        this.albums = albums;
+    }
 }
