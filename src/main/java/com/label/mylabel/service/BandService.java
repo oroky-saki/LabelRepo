@@ -6,7 +6,6 @@ import com.label.mylabel.exceptions.BandIsNotExist;
 import com.label.mylabel.exceptions.BandNotFoundException;
 import com.label.mylabel.model.Band;
 import com.label.mylabel.repository.BandsRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
