@@ -2,6 +2,8 @@ package com.label.mylabel.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class AlbumEntity {
 
@@ -14,6 +16,9 @@ public class AlbumEntity {
     @ManyToOne
     @JoinColumn(name = "band_id")
     private BandEntity band;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "album")
+    private List<TrackEntity> track;
 
     public AlbumEntity() {
     }
